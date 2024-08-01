@@ -14,3 +14,12 @@ git config --global alias.lg "log --pretty=format:'%C(green)%h %C(reset)-%C(auto
 
 git config --global alias.la "log --pretty=format:'%C(green)%h %C(reset)-%C(auto)%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph --color --date-order --all"
 ```
+
+3. Rebase from detached HEAD
+```bash
+git add .
+git commit -m "Your commit message"
+git checkout -b temp-branch
+git checkout main
+git rebase temp-branch
+```
